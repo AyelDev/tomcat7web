@@ -7,6 +7,6 @@
 <title>sample jsp file</title>
 </head>
 <body>
-<h1>This is jsp sample file</h1>
+<h1>This is jsp sample page</h1>
 </body>
 </html>
