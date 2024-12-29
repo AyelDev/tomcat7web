@@ -16,7 +16,7 @@
 
             <!-- Host definition for default webapp -->
             <Host name="localhost" appBase="webapps"
-                  unpackWARs="true" autoDeploy="false" deployOnStartup="false">
+                  unpackWARs="true" autoDeploy="true" deployOnStartup="false">
 
                  <Context path="" docBase="tomcat7web" reloadable="true">
  
