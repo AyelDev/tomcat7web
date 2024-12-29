@@ -1,4 +1,4 @@
-FROM maven:3.8-eclipse-temurin-8 AS build
+FROM maven:3.6-eclipse-temurin-8 AS build
 
 WORKDIR /app
 
@@ -13,6 +13,9 @@ RUN mvn clean package
 FROM tomcat:7.0-alpine
 
 WORKDIR /usr/local/tomcat/webapps/
+
+# Replace the default server.xml
+COPY server.xml /usr/local/tomcat/conf/server.xml
 
 COPY --from=build /app/target/tomcat7web.war /usr/local/tomcat/webapps/tomcat7web.war
 
