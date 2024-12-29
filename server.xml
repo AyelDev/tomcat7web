@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Server port="-1" shutdown="SHUTDOWN">
     
+
+
     <!-- Service definition -->
     <Service name="Catalina">
         
@@ -14,7 +16,15 @@
 
             <!-- Host definition for default webapp -->
             <Host name="localhost" appBase="webapps"
-                  unpackWARs="true" autoDeploy="true">
+                  unpackWARs="true" autoDeploy="false" deployOnStartup="false">
+
+                 <Context path="" docBase="tomcat7web" reloadable="true">
+ 
+                <!-- Default set of monitored resources -->
+                 <WatchedResource>WEB-INF/web.xml</WatchedResource>
+
+                </Context>
+
             </Host>
 
         </Engine>
